@@ -1,0 +1,47 @@
+@import url("../themes/theme.css");
+
+
+
+window {
+margin: 0px;
+border: 1px solid  #3d3a58; /* #bd93f9; */
+border-radius: 10px;
+/* background-color: #282a36; */
+background-color: #3D3A58;
+font-family: Monofur Nerd Font;
+}
+
+#input {
+margin: 5px;
+border: none;
+border-radius: 10px;
+/* color: #f8f8f2; */
+color: DFDFE7;
+/* background-color: #44475a; */
+background-color: #c3c0e9;
+}
+
+#inner-box {
+border: none;
+border-radius: 10px;
+}
+
+#outer-box {
+margin: 5px;
+border: none;
+border-radius: 10px;
+background-color: #020204;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: #DFDFE7;
+} 
+
+#entry {
+}
+
+#entry:selected {
+background-color: #70B0BC;
+}

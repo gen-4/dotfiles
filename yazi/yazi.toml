@@ -1,0 +1,9 @@
+[opener]
+
+edit = [
+	{ run = 'nvim "$@"', block = true, desc = "Open" }
+]
+
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" }
+]
