@@ -8,7 +8,7 @@
     "margin-right": 5,
     "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk", "battery"],
-    "modules-right": ["tray", "custom/randwall", "network", "pulseaudio", "clock"],
+    "modules-right": ["tray", "backlight", "custom/randwall", "network", "pulseaudio", "clock"],
     // Modules configuration
 	"clock": {
 		"format": "   {:%H:%M}",
@@ -118,14 +118,14 @@
 
 	"backlight": {
         // "device": "acpi_video1",
-	"format": "{icon} {percent}%",
+	"format": "{icon}   {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
 //	"on-scroll-up":,
 //	"on-scroll-down":,
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume}%",
+		"format": "{icon}   {volume}%",
         	"format-muted": "󰝟",
 		"format-icons": {
 			"default": ["󰕿", "󰖀", "󰕾"]
@@ -134,7 +134,7 @@
     "on-scroll-up": "bash ~/.scripts/volume up",
     "on-scroll-down": "bash ~/.scripts/volume down",
     "scroll-step": 5,
-		"on-click-right": "pavucontrol"
+		"on-click": "pavucontrol"
   },
   "custom/randwall": {
     "format": "󰏘",
@@ -142,8 +142,9 @@
     "on-click-right": "bash $HOME/.config/hypr/wall.sh"
   },
   "custom/launcher": {
-    "format": "󰈸",
-    "on-click": "bash $HOME/.config/rofi/launcher.sh",
+//    "format": "󰈸",
+    "format": "" ,
+    "on-click": "bash $HOME/.config/wofi/launcher.sh",
 //    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
     "on-click-right": "bash $HOME/.config/rofi/run.sh"  
 //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
@@ -163,6 +164,5 @@
     "format": "󰈋",
     "on-click": "hyprpicker -a -f hex",
     "on-click-right": "hyprpicker -a -f rgb"
-  },
-  }
+  } 
 }

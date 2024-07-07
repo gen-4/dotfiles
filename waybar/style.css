@@ -9,35 +9,34 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0.85);
-    color: #f4d9e1;
+/*    background: rgba(30, 30, 46, 0.85); */
+    background: #242337;
+    opacity: .9;
+    color: #DFDFE7;
     border-radius: 1000px;
 }
 
 #workspaces {
-	background: #282828;
-	margin: 2px;
-  padding: 0px 5px 0px 5px;
-	border-radius: 16px;
-  font-weight: normal;
-  font-style: normal;
+    background: #13111E;
+    margin: 2px;
+    padding: 0px 5px 0px 5px;
+    border-radius: 16px;
+    font-weight: normal;
+    font-style: normal;
 }
 #workspaces button {
     padding: 0px 5px;
     border-radius: 16px;
-    color: #928374;
 }
 
 #workspaces button.active {
-    color: #f4d9e1;
+    color: #85DCEC;
     background-color: transparent;
     border-radius: 16px;
 }
 
 #workspaces button:hover {
-	background-color: #E6B9C6;
-	color: black;
-	border-radius: 16px;
+    border-radius: 16px;
 }
 
 #custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher {
@@ -54,7 +53,6 @@ window#waybar {
 }
 
 #custom-date {
-	color: #D3869B;
 }
 
 #custom-power {
@@ -77,8 +75,7 @@ window#waybar {
 }
 
 #clock {
-    color: #E6B9C6;
-    background-color: #282828;
+    background-color: #13111E;
     border-radius: 1000px;
     padding-left: 13px;
     padding-right: 15px;
@@ -106,8 +103,7 @@ window#waybar {
 }
 
 #backlight {
-    background-color: #24283b;
-    color: #db4b4b;
+    color: #d85DCE;
     border-radius: 0px 0px 0px 0px;
     margin: 5px;
     margin-left: 0px;
@@ -116,13 +112,11 @@ window#waybar {
 }
 
 #network {
-    color: #f4d9e1;
     border-radius: 8px;
     margin-right: 5px;
 }
 
 #pulseaudio {
-    color: #f4d9e1;
     border-radius: 8px;
     margin-left: 0px;
 }
@@ -141,8 +135,8 @@ window#waybar {
 }
 
 #custom-launcher {
-    color: #e5809e;
-    background-color: #282828;
+    color: #e85DCE;
+    background-color: #13111E;
     margin: 0px 0px 0px 0px;
     padding: 0 20px 0 13px;
     border-radius: 1000px;
@@ -150,7 +144,6 @@ window#waybar {
 }
 
 #custom-launcher button:hover {
-    background-color: #FB4934;
     color: transparent;
     margin-right: -5px;
     margin-left: 10px;
@@ -204,7 +197,7 @@ window#waybar {
 }
 
 #cpu {
-    background-color: #282828;
+    background-color: #13111E;
     /*color: #FABD2D;*/
     border-radius: 16px;
     margin: 5px;
@@ -215,7 +208,7 @@ window#waybar {
 }
 
 #memory {
-    background-color: #282828;
+    background-color: #13111E;
     /*color: #83A598;*/
     border-radius: 16px;
     margin: 5px;
@@ -226,7 +219,7 @@ window#waybar {
 }
 
 #disk {
-    background-color: #282828;
+    background-color: #13111E;
     /*color: #8EC07C;*/
     border-radius: 16px;
     margin: 5px;
@@ -246,3 +239,4 @@ window#waybar {
     padding: 0px 11px 0px 9px;
     font-weight: bold;
 }
+
