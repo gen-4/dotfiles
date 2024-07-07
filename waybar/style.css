@@ -39,12 +39,18 @@ window#waybar {
     border-radius: 16px;
 }
 
-#custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher {
+#custom-date, #clock, #custom-randwall, #custom-launcher {
 	background: transparent;
 	padding: 4px;
 	margin: 2px;
   border-radius: 8px;
   border: solid 0px #f4d9e1;
+}
+
+#backlight, #bluetooth, #pulseaudio, #network {
+    background-color: #3D3A58;
+    margin: 5px 0;
+    padding: 5px;
 }
 
 
@@ -99,31 +105,36 @@ window#waybar {
 #battery.warning:not(.charging) {
     background-color: #f7768e;
     color: #24283b;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 1000px;
+    margin: 5px 0;
+    padding: 2px 8px;
 }
 
 #backlight {
     color: #d85DCE;
-    background-color: #3D3A58;
-    border: none;
     border-radius: 1000px 0px 0px 1000px;
     padding: 0 2px 0 10px;
-    margin: 5px 0;
 }
 
 #network {
-    background-color: #3D3A58;
-    margin: 5px 0;
     border-right: solid 5px #3D3A58;
-    border-radius: 0;
 }
 
 #pulseaudio {
-    background-color: #3D3A58;
-    margin: 5px 0;
     padding: 0 10px 0 2px;
-    border: none;
     border-radius: 0 1000px 1000px 0;
+}
+
+#bluetooth.off {
+    color: #F58282;
+}
+
+#bluetooth.on {
+    color: #7EF5CB;
+}
+
+#bluetooth.connected {
+    color: #7DF5F4;
 }
 
 #pulseaudio.muted {
