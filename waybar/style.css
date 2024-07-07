@@ -104,28 +104,30 @@ window#waybar {
 
 #backlight {
     color: #d85DCE;
-    border-radius: 0px 0px 0px 0px;
-    margin: 5px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 0px 0px;
+    background-color: #3D3A58;
+    border: none;
+    border-radius: 1000px 0px 0px 1000px;
+    padding: 0 2px 0 10px;
+    margin: 5px 0;
 }
 
 #network {
-    border-radius: 8px;
-    margin-right: 5px;
+    background-color: #3D3A58;
+    margin: 5px 0;
+    border-right: solid 5px #3D3A58;
+    border-radius: 0;
 }
 
 #pulseaudio {
-    border-radius: 8px;
-    margin-left: 0px;
+    background-color: #3D3A58;
+    margin: 5px 0;
+    padding: 0 10px 0 2px;
+    border: none;
+    border-radius: 0 1000px 1000px 0;
 }
 
 #pulseaudio.muted {
-    background: transparent;
     color: #928374;
-    border-radius: 8px;
-    margin-left: 0px;
 }
 
 #custom-randwall {
