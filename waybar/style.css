@@ -81,7 +81,7 @@ window#waybar {
 }
 
 #clock {
-    background-color: #13111E;
+    background-color: #70B0BC;
     border-radius: 1000px;
     padding-left: 13px;
     padding-right: 15px;
@@ -111,7 +111,7 @@ window#waybar {
 }
 
 #backlight {
-    color: #d85DCE;
+    color: #70B0BC;
     border-radius: 1000px 0px 0px 1000px;
     padding: 0 2px 0 10px;
 }
@@ -148,9 +148,8 @@ window#waybar {
 }
 
 #custom-launcher {
-    color: #e85DCE;
-    background-color: #13111E;
-    margin: 0px 0px 0px 0px;
+    color: #70B0BC;
+    margin: 0;
     padding: 0 20px 0 13px;
     border-radius: 1000px;
     font-size: 20px;
