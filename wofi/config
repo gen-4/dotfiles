@@ -10,3 +10,4 @@ halign=fill
 orientation=vertical
 content_halign=fill
 drun-display_generic=true
+allow_images=true

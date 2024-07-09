@@ -7,8 +7,8 @@
     "margin-left": 5,
     "margin-right": 5,
     "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
-    "modules-center": ["cpu", "memory", "disk", "disk#anton", "battery"],
-    "modules-right": ["tray", "backlight", "bluetooth", "network", "pulseaudio", "clock"],
+    "modules-center": ["cpu", "memory", "disk", "disk#anton"],
+    "modules-right": ["tray", "backlight", "bluetooth", "network", "pulseaudio", "battery", "clock"],
     // Modules configuration
 	"clock": {
 		"format": "   {:%H:%M}",
@@ -48,8 +48,8 @@
       "on-click": "playerctl previous",
       "on-click-right": "playerctl next",
       "format-icons": {
-        "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
-        "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
+        "Playing": "<span foreground='#DFDFE7'>󰒮 󰐌  󰒭</span>",
+        "Paused": "<span foreground='#8380a0'>󰒮 󰏥  󰒭</span>"
       },
     },
 

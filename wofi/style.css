@@ -1,32 +1,29 @@
 window {
 margin: 0px;
 border: 1px solid  #3d3a58; /* #bd93f9; */
-border-radius: 10px;
-/* background-color: #282a36; */
-background-color: #3D3A58;
-font-family: Monofur Nerd Font;
+border-radius: 5px;
+background-color: #C3C0E0;
+font-family: Terminess Nerd Font;
 }
 
 #input {
 margin: 5px;
 border: none;
 border-radius: 10px;
-/* color: #f8f8f2; */
-color: DFDFE7;
-/* background-color: #44475a; */
-background-color: #c3c0e9;
+color: #DFDFE7;
+background-color: #2A2A2A;
 }
 
 #inner-box {
 border: none;
-border-radius: 10px;
+border-radius: 5px;
 }
 
 #outer-box {
-margin: 5px;
+margin: 2px;
 border: none;
-border-radius: 10px;
-background-color: #020204;
+border-radius: 5px;
+background-color: #24232F;
 }
 
 #text {
@@ -35,9 +32,15 @@ border: none;
 color: #DFDFE7;
 } 
 
+#img.drun-icon {
+margin-right: 8px;
+}
+
 #entry {
+margin: 10px;
+border-radius: 10px;
 }
 
 #entry:selected {
-background-color: #70B0BC;
+background-color: #3A4059;
 }
