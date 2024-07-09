@@ -4,6 +4,7 @@ border: 1px solid  #3d3a58; /* #bd93f9; */
 border-radius: 5px;
 background-color: #C3C0E0;
 font-family: Terminess Nerd Font;
+opacity: .95;
 }
 
 #input {
@@ -24,6 +25,7 @@ margin: 2px;
 border: none;
 border-radius: 5px;
 background-color: #24232F;
+opacity: .95;
 }
 
 #text {
