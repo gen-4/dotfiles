@@ -1,0 +1,211 @@
+configuration {
+  icon-theme: "Papirus-Dark";
+  font: "Terminess Nerd Font Mono";
+  terminal: "foot";
+  show-icons: true;
+  display-drun: "Apps";
+  drun-display-format: "{name} {icon}";
+}
+
+
+
+
+* {
+  /* Default background color */
+  background-color: #24232F;
+  text-color:       #DFDFE7;
+}
+
+
+window {
+  width: 500px;
+  padding: 1em;
+  border-color: #70B0BC;
+  border:       2px;
+  border-radius: 10px;
+  background-color: #24232F;
+
+}
+
+mainbox {
+  spacing: 0px;
+  children: [message,inputbar,listview];
+}
+
+message {
+    enabled:                     true;
+    margin:                      0px 100px;
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               15px;
+    border-color:                inherit;
+    background-color:            inherit;
+    text-color:                  inherit;
+    size:                        400em;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    placeholder-color:           inherit;
+    blink:                       true;
+    markup:                      true;
+    size:                        400em;
+
+}
+error-message {
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                inherit;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+element {
+  background: transparent;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+inputbar {
+  margin: 0px 10px;
+  spacing: 0.4em;
+  border-color: #24232F;
+  border:        5px;
+  background-color: #24232F;
+  children: [entry,overlay,case-indicator];
+}
+
+
+listview, message {
+  padding: 0.5em;
+  border-color: #24232F;
+  border:        5px;
+  border-radius: 10px;
+  background-color: #24232F;
+
+  columns: 1;
+  lines:   8;
+}
+listview {
+  border:       0px 5px 5px 5px;
+  border-radius: 10px 10px 10px 10px;
+  spacing: 10px;
+  background-color: #24232F;
+  border-color:     #24232F;
+  scrollbar:    true;
+}
+
+
+element {
+    border:  1px;
+    border-radius: 1000px;
+    padding: 10px 18px;
+    border-color: #24232F;
+}
+element-text {
+    background-color: #24232F;
+    text-color:       #DFDFE7;
+	margin: 0 15px;
+}
+
+element normal.normal {
+    background-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.normal.urgent {
+    background-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.normal.active {
+    background-color: #3D3A58;
+    text-color:       #DFDFE7;
+}
+element.selected.normal {
+    background-color: #3D3A58;
+    border-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.selected.urgent {
+    background-color: #3D3A58;
+    border-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.selected.active {
+    background-color: #3D3A58;
+    border-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.alternate.normal {
+    background-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.alternate.urgent {
+    background-color: #24232F;
+    text-color:       #DFDFE7;
+}
+element.alternate.active {
+    background-color: #24232F;
+    text-color:       #DFDFE7;
+}
+
+
+element-text.selected.normal {
+    background-color: #3D3A58;
+    border-color: #3D3A58;
+    text-color:       #DFDFE7;
+}
+element-text.selected.urgent {
+    background-color: #3D3A58;
+    border-color: #3D3A58;
+    text-color:       #DFDFE7;
+}
+element-text.selected.active {
+    background-color: #3D3A58;
+    border-color: #3D3A58;
+    text-color:       #DFDFE7;
+}
+scrollbar {
+    width:        1px ;
+    border:       0;
+    handle-color: #DFDFE7;
+    handle-width: 2px ;
+    padding:      0;
+}
+mode-switcher {
+    border:  0px;
+    spacing: 0px;
+    expand: true;
+}
+button {
+    text-color: #E5B9C6;
+    border:       0px 0px 5px ;
+    border-color: #282738;
+    border-radius:    10px 10px 0 0;
+    background-color: #282738;
+    horizontal-align: 0.5;
+}
+button selected.normal {
+    text-color: #E5B9C6;
+    margin: 0px;
+    padding: 0px;
+    border:     5px 5px 5px 5px ;
+    border-color: #282738;
+    border-radius:    10px 10px 10px 10px;
+    background-color: #353446;
+}
+
+entry {
+    placeholder: "Search here";
+    placeholder-color: #C2C2C2;
+    border-color: #78AEB9;
+    background-color: #353446;
+    border:        2px;
+    border-radius: 1000px;
+	padding: 10px 15px;
+    text-color: #DFDFE7;
+  }
