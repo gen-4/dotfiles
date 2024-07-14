@@ -73,7 +73,7 @@ window#waybar {
 }
 
 #tray {
-    background: #282828;
+    background: #00FF00;
     margin: 5px 5px 5px 5px;
     border-radius: 16px;
     padding: 0px 5px;
@@ -254,3 +254,10 @@ window#waybar {
     font-weight: bold;
 }
 
+#custom-randwall {
+    margin: 5px;
+    margin-left: 15px;
+    padding: 2px 10px;
+    background-color: #40909C;
+    border-radius: 1000px;
+}
