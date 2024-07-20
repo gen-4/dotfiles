@@ -1,3 +1,7 @@
 #!/usr/bin/env fish
 
-swww img ( random choice /home/anton/images/wallpapers/* )
+set new_wallpaper ( random choice /home/anton/images/wallpapers/* ) 
+hyprctl hyprpaper unload all
+hyprctl hyprpaper preload $new_wallpaper
+hyprctl hyprpaper wallpaper ",$new_wallpaper"
+
