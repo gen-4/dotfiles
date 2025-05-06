@@ -796,7 +796,15 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-storm'
+      vim.cmd.colorscheme 'lunaperche'
+      vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'VetSplit', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'NONE' })
+      vim.api.nvim_set_hl(0, 'CursorLine', { bg = 'NONE' })
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
