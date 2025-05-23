@@ -170,6 +170,29 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Permanent Diagnostics setup
+vim.diagnostic.config {
+  virtual_text = {
+    -- Show diagnostic messages as virtual text on the right
+    prefix = '●', -- Customize the prefix (e.g., bullet point)
+    source = true, -- Show the source of the diagnostic (e.g., LSP server name)
+    spacing = 4, -- Number of spaces before the diagnostic message
+    -- Align diagnostics to the right side of the line
+    format = function(diagnostic)
+      return string.format('%s', diagnostic.message)
+    end,
+  },
+  signs = true, -- Show signs in the gutter (optional)
+  underline = true, -- Underline the problematic code (optional)
+  update_in_insert = false, -- Don't update diagnostics in insert mode
+  severity_sort = true, -- Sort diagnostics by severity
+}
+
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', { fg = '#FF0000' }) -- Red for errors
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', { fg = '#FFAA00' }) -- Orange for warnings
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', { fg = '#00AFFF' }) -- Blue for info
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { fg = '#00FF00' }) -- Green for hints
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -888,7 +911,7 @@ require('lazy').setup({
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
