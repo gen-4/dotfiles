@@ -194,7 +194,8 @@ tooltip {
 #taskbar {
     background: @foreground;
     border-radius: 1000px;
-    padding: 0 5px;
+    margin: 0;
+    padding: 2px 5px;
 }
 
 #taskbar.empty {
@@ -208,6 +209,7 @@ tooltip {
     padding: 0;
     border: 0;
     box-shadow: 0 0 0 0;
+    min-height: 5px;
 }
 
 #taskbar button.active {
