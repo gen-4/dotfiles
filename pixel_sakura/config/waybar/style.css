@@ -34,7 +34,7 @@ window#waybar {
 }
 
 tooltip {
-    background: @background;
+    background: @color9;
     color: @color7;
 }
 
