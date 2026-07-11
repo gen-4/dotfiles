@@ -1,0 +1,206 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "deny",
+      "git diff *": "allow",
+      "git status *": "allow",
+      "grep *": "allow",
+      "ls *": "allow",
+    },
+    "list": "allow",
+    "external_directory": "deny"
+  },
+  "agent": {
+    "build": {
+      "disable": true
+    },
+    "plan": {
+      "mode": "primary",
+      "description": "Read only summarizing agent",
+      "permission": {
+        "edit": "deny",
+        "task": "deny"
+      }
+    },
+    "git": {
+      "mode": "primary",
+      "description": "Agent allowed to perform git commands",
+      "prompt": "./prompts/git.txt",
+      "temperature": 0.0,
+      "color": "#61531A",
+      "permission": {
+        "edit": "deny",
+        "task": "deny",
+        "bash": {
+          "git *": "allow",
+          "git push *": "ask"
+        }
+      }
+    },
+    "orchestrator": {
+      "mode": "primary",
+      "description": "Main agent that will control all the workflow",
+      "prompt": "./prompts/orchestrator.txt",
+      "temperature": 0.0,
+      "color": "#AD1D00",
+      "permission": {
+        "edit": "deny",
+        "task": {
+          "*": "deny",
+          "*summarizer*": "allow",
+          "*planner*": "allow",
+          "*brainstorm*": "allow",
+          "*model*": "allow",
+          "*designer*": "allow",
+          "*coder*": "allow",
+          "*ux*": "allow",
+          "*reviewer*": "allow",
+          "*tester*": "allow"
+        }
+      }
+    },
+    "summarizer": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to summarize what has been done so far for the user",
+      "prompt": "./prompts/summarizer.txt",
+      "temperature": 1.0,
+      "steps": 5,
+      "permission": {
+        "edit": "deny",
+        "task": "deny",
+      }
+    },
+    "planner": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to plan step by step the different tasks that will be performed by other subagents to achieve the goal the user has set",
+      "prompt": "./prompts/planner.txt",
+      "temperature": 0.1,
+      "steps": 5,
+      "permission": {
+        "edit": "deny",
+        "task": "deny"
+      }
+    },
+    "brainstormer": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to come up with innovative and well thought ideas on how to make real the task set by the user",
+      "prompt": "./prompts/brainstorm.txt",
+      "temperature": 1.0,
+      "steps": 5,
+      "permission": {
+        "edit": "deny",
+        "task": "deny"
+      }
+    },
+    "model-specialist": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to design the models and domain of the project and perform changes and updates on the databases",
+      "prompt": "./prompts/model-specialist.txt",
+      "temperature": 0.0,
+      "steps": 5,
+      "permission": {
+        "edit": "allow",
+        "task": "deny",
+        "bash": {
+          "psql *": "allow"
+        }
+      }
+    },
+    "designer": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to design the code and file structure of the project",
+      "prompt": "./prompts/designer.txt",
+      "temperature": 0.6,
+      "steps": 5,
+      "permission": {
+        "edit": "allow",
+        "task": "deny",
+        "bash": {
+          "mkdir *": "allow",
+          "rmdir *": "allow",
+          "rm *": "allow",
+          "touch *": "allow",
+          "docker *": "allow"
+        }
+      }
+    },
+    "coder": {
+      "mode": "subagent",
+      "description": "Subagent who perform the real work, he is the builder. He will perform all coding and executing related tasks.",
+      "prompt": "./prompts/coder.txt",
+      "temperature": 0.4,
+      "steps": 5,
+      "permission": {
+        "edit": "allow",
+        "task": "deny",
+        "bash": {
+          "mkdir *": "allow",
+          "rmdir *": "allow",
+          "rm *": "allow",
+          "touch *": "allow",
+          "echo *": "allow",
+          "export *": "allow",
+          "node *": "allow",
+          "mvn *": "allow",
+          "java *": "allow",
+          "python *": "allow",
+          "go *": "allow",
+          "docker *": "allow"
+        }
+      }
+    },
+    "ux-specialist": {
+      "mode": "subagent",
+      "description": "Subagent who designs frontends. They can be web, mobile or native.",
+      "prompt": "./prompts/ux-specialist.txt",
+      "temperature": 0.8,
+      "steps": 5,
+      "permission": {
+        "edit": "allow",
+        "task": "deny",
+        "bash": {
+          "mkdir *": "allow",
+          "rmdir *": "allow",
+          "rm *": "allow",
+          "touch *": "allow",
+          "echo *": "allow",
+          "export *": "allow",
+          "node *": "allow",
+          "mvn *": "allow",
+          "java *": "allow",
+          "python *": "allow",
+          "go *": "allow"
+        }
+      }
+    },
+    "reviewer": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to review what has been made and ensure everything follows the user's guidelines",
+      "prompt": "./prompts/reviewer.txt",
+      "temperature": 0.0,
+      "steps": 5,
+      "permission": {
+        "edit": "deny",
+        "task": "deny"
+      }
+    },
+    "tester": {
+      "mode": "subagent",
+      "description": "Subagent whose job is to implement the different tests to ensure the project works and will always work as intended",
+      "prompt": "./prompts/tester.txt",
+      "temperature": 0.1,
+      "steps": 5,
+      "permission": {
+        "edit": "allow",
+        "task": "deny",
+        "bash": {
+          "mkdir *": "allow",
+          "rmdir *": "allow",
+          "rm *": "allow",
+          "touch *": "allow"
+        }
+      }
+    }
+  }
+}
