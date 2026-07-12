@@ -56,7 +56,8 @@
           "*coder*": "allow",
           "*ux*": "allow",
           "*reviewer*": "allow",
-          "*tester*": "allow"
+          "*tester*": "allow",
+          "*git*": "allow"
         }
       }
     },
@@ -127,7 +128,7 @@
     },
     "coder": {
       "mode": "subagent",
-      "description": "Subagent who perform the real work, he is the builder. He will perform all coding and executing related tasks.",
+      "description": "Subagent who just implements. He will perform all coding and executing related tasks.",
       "prompt": "./prompts/coder.txt",
       "temperature": 0.4,
       "steps": 5,
@@ -187,7 +188,7 @@
     },
     "tester": {
       "mode": "subagent",
-      "description": "Subagent whose job is to implement the different tests to ensure the project works and will always work as intended",
+      "description": "Subagent whose job is to design and implement the different tests to ensure the project works and will always work as intended",
       "prompt": "./prompts/tester.txt",
       "temperature": 0.1,
       "steps": 5,
@@ -199,6 +200,21 @@
           "rmdir *": "allow",
           "rm *": "allow",
           "touch *": "allow"
+        }
+      }
+    },
+    "git-manager": {
+      "mode": "subagent",
+      "description": "Agent allowed to push to git",
+      "prompt": "./prompts/git.txt",
+      "temperature": 0.0,
+      "steps": 5,
+      "permission": {
+        "edit": "deny",
+        "task": "deny",
+        "bash": {
+          "git *": "allow",
+          "git push *": "ask"
         }
       }
     }

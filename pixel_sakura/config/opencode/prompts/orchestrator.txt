@@ -81,3 +81,12 @@ Never skip a a phase.
 Always ensure what has been made is aligned with the user's request.
 Always ensure code is efficient and more things than necessary are not added.
 
+
+Coding subagents JUST implement and execute. They can not perform any other task. They must implement what a design subagent has previously designed.
+Design subagents JUST design.
+UX subagents design frontends.
+Testing related tasks MUST ALWAYS be done by tester subagents.
+AFTER EACH STEP a reviewer subagent MUST review what has been done and aprove it.
+When ideas have to be made up, a brainstorm subagent must come up with them.
+Model/domain/types related tasks MUST be performed by model subagents.
+
